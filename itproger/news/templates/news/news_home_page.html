@@ -14,7 +14,7 @@
             <div class="alert alert-warning">
                 <h2>{{ new.title }}</h2>
                 <p>{{ new.anons }}</p>
-                <p>{{ new.full_text }}</p>
+                <a href="{% url 'news-detail' new.id %}" class="btn btn-warning">Reed full text</a>
             </div>
             {% endfor %}
         {% else %}
