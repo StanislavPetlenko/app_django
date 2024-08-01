@@ -1,0 +1,24 @@
+{% extends 'main_page/layout.html' %}
+
+{% block title%}Fresh news{% endblock %}
+
+{% block content%}
+    <div class="features">
+        <h1>Fresh news</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nihil praesentium similique tempore vitae.
+            Consequuntur debitis dignissimos mollitia quia sit?
+        </p>
+        <button class="btn btn-warning">This is button</button>
+        {% if news %}
+            {% for new in news %}
+            <div class="alert alert-warning">
+                <h2>{{ new.title }}</h2>
+                <p>{{ new.anons }}</p>
+                <p>{{ new.full_text }}</p>
+            </div>
+            {% endfor %}
+        {% else %}
+            <p>Немає новин</p>
+        {% endif %}
+    </div>
+{% endblock %}

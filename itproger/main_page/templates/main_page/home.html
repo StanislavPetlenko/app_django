@@ -1,0 +1,14 @@
+{% extends 'main_page/layout.html' %}
+
+{% block title%}{{ home_page_name }}{% endblock %}
+
+{% block content%}
+    <div class="features">
+        <h1>{{ home_page_name }}</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nihil praesentium similique tempore vitae. Consequuntur debitis dignissimos mollitia quia sit?</p>
+        <button class="btn btn-warning">This is button</button>
+        {% for el in values %}
+            <p>{{ el }}</p>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'main_page/layout.html' %}
+
+{% block title%}Форма додавання новини{% endblock %}
+
+{% block content%}
+    <div class="features">
+        <h1>Форма додавання новини</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.title }}<br>
+            {{ form.anons }}<br>
+            {{ form.full_text }}<br>
+            {{ form.pub_date }}<br>
+            <span>{{ error }}</span>
+
+<!--            <input type="text" placeholder="Назва новини" class="form-control"><br>-->
+<!--            <input type="text" placeholder="Короткий опис новини" class="form-control"><br>-->
+<!--            <textarea class="form-control" placeholder="Повний текст новини"></textarea>-->
+<!--            <input type="date" class="form-control"><br>-->
+<!--            <input type="time" class="form-control"><br>-->
+            <button class="btn btn-success" type="submit">Відправити</button>
+        </form>
+    </div>
+{% endblock %}
